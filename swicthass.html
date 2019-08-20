@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My bulb</title>
+</head>
+<style type="text/css">
+.switch{
+	margin-left: 450px;
+	margin-top:250px;
+	border: none;
+	height: 300px;
+	width: 400px;
+	background-color: grey;
+	padding-top: 50px;
+
+
+}
+.switch:hover{
+	margin-left: 450px;
+	margin-top:250px;
+	border: none;
+	height: 300px;
+	width: 400px;
+	background-color: grey;
+	padding-top: 50px;
+	border-radius: 60px;
+
+}
+	
+
+
+
+</style>
+<body>
+<div class="switch">
+<button id="press1" style="background:grey;color:white"; onclick="on()">ON</button>
+<button id="press2" style="background:tomato;color:white"; onclick="off()">OFF</button>
+<img id="light" src="n.jpg" height="250px" width="400px"></div>
+
+<script type="text/javascript">
+	function off () {
+		var press=document.getElementById('press1');
+		var light=document.getElementById('light');
+
+
+		var check=light.getAttribute('src');
+		if (check="y.jpg") {
+			light.setAttribute("src","n.jpg");
+			press.innerHTML="ON";
+			press.style.backgroundColor="tomato";
+
+		}
+			}
+
+		function on () {
+		var press=document.getElementById('press2');
+		var light=document.getElementById('light');
+
+		var check=light.getAttribute('src');
+		if (check="n.jpg") {
+			light.setAttribute("src","y.jpg");
+			press.innerHTML="OFF";
+			press.style.backgroundColor="red";
+		}
+	}
+</script>
+</body>
+</html>
